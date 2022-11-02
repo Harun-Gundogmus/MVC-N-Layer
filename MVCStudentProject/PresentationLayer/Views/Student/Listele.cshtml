@@ -1,0 +1,24 @@
+﻿@model List<Student>
+@using EntityLayer;
+
+<a class="btn btn-primary" href = "/Student/Ekle">Ekle</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Öğrenci ID</th>
+            <th>Öğrenci Adı</th>
+            <th>Öğrenci Soyadı</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+   {
+    <tbody>
+        <tr>
+        <td>@item.ogr_id</td>
+        <td>@item.ogr_ad</td>
+        <td>@item.ogr_soyad</td>
+        </tr>
+    </tbody>
+    }
+
+</table>
